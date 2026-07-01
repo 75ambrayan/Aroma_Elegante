@@ -602,26 +602,32 @@ export default function App() {
 
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-16"
-        style={{ background: `linear-gradient(to bottom, ${BG}F5, transparent)` }}>
-        <button className="md:hidden transition-opacity hover:opacity-70 cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setMenuOpen(!menuOpen)}>
-          <Menu size={20} />
-        </button>
-        <div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase">
-          {[{ label: "Inicio", href: "#" }, { label: "Catálogo", href: "#catalogo" }, { label: "Nosotros", href: "#nosotros" }, { label: "Contacto", href: "#contacto" }].map(l => (
-            <a key={l.label} href={l.href} className="transition-colors duration-200" style={{ color: `${FG}80` }}
-              onMouseEnter={e => (e.currentTarget.style.color = FG)} onMouseLeave={e => (e.currentTarget.style.color = `${FG}80`)}>{l.label}</a>
-          ))}
-        </div>
-        <div className="absolute left-1/2 -translate-x-1/2 px-2" style={{ maxWidth: "60vw" }}>
-          <span className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] uppercase font-black whitespace-nowrap" style={{ fontFamily: FONT, ...GRADIENT_TEXT }}>AROMA ELEGANTE</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <button className="relative transition-opacity hover:opacity-80 cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setCartOpen(true)}>
-            <ShoppingBag size={20} />
-            {cartCount > 0 && <span className="absolute -top-2 -right-2 text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold" style={{ background: GRADIENT_BTN, color: "#fff" }}>{cartCount}</span>}
-          </button>
-        </div>
-      </nav>
+  style={{ background: `linear-gradient(to bottom, ${BG}F5, transparent)` }}>
+  
+  {/* Izquierda: hamburguesa en mobile, links en desktop */}
+  <div className="flex items-center">
+    <button className="md:hidden cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setMenuOpen(!menuOpen)}>
+      <Menu size={20} />
+    </button>
+    <div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase">
+      {[{ label: "Inicio", href: "#" }, { label: "Catálogo", href: "#catalogo" }, { label: "Nosotros", href: "#nosotros" }, { label: "Contacto", href: "#contacto" }].map(l => (
+        <a key={l.label} href={l.href} className="transition-colors duration-200" style={{ color: `${FG}80` }}
+          onMouseEnter={e => (e.currentTarget.style.color = FG)} onMouseLeave={e => (e.currentTarget.style.color = `${FG}80`)}>{l.label}</a>
+      ))}
+    </div>
+  </div>
+
+  {/* Centro: logo */}
+  <div className="absolute left-1/2 -translate-x-1/2">
+    <span className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] uppercase font-black whitespace-nowrap" style={{ fontFamily: FONT, ...GRADIENT_TEXT }}>AROMA ELEGANTE</span>
+  </div>
+
+  {/* Derecha: carrito */}
+  <button className="relative cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setCartOpen(true)}>
+    <ShoppingBag size={20} />
+    {cartCount > 0 && <span className="absolute -top-2 -right-2 text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold" style={{ background: GRADIENT_BTN, color: "#fff" }}>{cartCount}</span>}
+  </button>
+</nav>
 
       {/* Mobile menu */}
       {menuOpen && (
