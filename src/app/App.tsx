@@ -612,8 +612,8 @@ export default function App() {
               onMouseEnter={e => (e.currentTarget.style.color = FG)} onMouseLeave={e => (e.currentTarget.style.color = `${FG}80`)}>{l.label}</a>
           ))}
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <span className="text-sm tracking-[0.4em] uppercase font-black" style={{ fontFamily: FONT, ...GRADIENT_TEXT }}>AROMA ELEGANTE</span>
+        <div className="absolute left-1/2 -translate-x-1/2 px-2" style={{ maxWidth: "60vw" }}>
+          <span className="text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.4em] uppercase font-black whitespace-nowrap" style={{ fontFamily: FONT, ...GRADIENT_TEXT }}>AROMA ELEGANTE</span>
         </div>
         <div className="flex items-center gap-4">
           <button className="relative transition-opacity hover:opacity-80 cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setCartOpen(true)}>
@@ -746,7 +746,7 @@ export default function App() {
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-20 grid md:grid-cols-2 gap-12 items-center">
           <FadeIn y={40}>
             <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "#B600A8", fontFamily: FONT }}>Más Vendido</p>
-            <h2 className="font-black uppercase leading-tight mb-6" style={{ fontFamily: FONT, fontSize: "clamp(2rem, 5vw, 4rem)", ...GRADIENT_TEXT }}>Noche de Lima</h2>
+            <h2 className="font-black uppercase leading-tight mb-6" style={{ fontFamily: FONT, fontSize: "clamp(2rem, 5vw, 4rem)", ...GRADIENT_TEXT }}>Parfum City</h2>
             <p className="font-light leading-relaxed mb-8 max-w-md" style={{ color: `${FG}70`, fontFamily: FONT }}>Nuestra fragancia estrella. Oud noble con jazmín nocturno y un fondo de vainilla peruana. Distinción absoluta en cada gota. 100% original, garantizado.</p>
             <GradientButton className="px-10 py-4 text-sm" onClick={() => addToCart(PRODUCTS[3])}>Añadir al Carrito — S/. 110</GradientButton>
           </FadeIn>
