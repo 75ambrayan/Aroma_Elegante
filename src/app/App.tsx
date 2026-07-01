@@ -606,7 +606,7 @@ export default function App() {
         <button className="md:hidden transition-opacity hover:opacity-70 cursor-pointer bg-transparent border-none" style={{ color: FG }} onClick={() => setMenuOpen(!menuOpen)}>
           <Menu size={20} />
         </button>
-        <div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase" style={{ display: "none" }}>
+        <div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] uppercase">
           {[{ label: "Inicio", href: "#" }, { label: "Catálogo", href: "#catalogo" }, { label: "Nosotros", href: "#nosotros" }, { label: "Contacto", href: "#contacto" }].map(l => (
             <a key={l.label} href={l.href} className="transition-colors duration-200" style={{ color: `${FG}80` }}
               onMouseEnter={e => (e.currentTarget.style.color = FG)} onMouseLeave={e => (e.currentTarget.style.color = `${FG}80`)}>{l.label}</a>
