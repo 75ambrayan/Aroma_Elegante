@@ -41,7 +41,7 @@ const PACKS: Product[] = [
     id: 103, name: "Pack Regalo", brand: "AROMA ELEGANTE", price: 125, category: "Pack",
     size: "1 perfume · 50 ml + empaque premium", description: "1 perfume original con empaque premium, lazo decorativo y tarjeta de agradecimiento. Ideal para fechas especiales.",
     notes: ["1 Perfume", "Empaque Premium", "Lazo Decorativo", "Tarjeta Regalo"],
-    image: "/productos/noche-de-lima.jpg", badge: "Ideal para Regalo", isPack: true,
+    image: "/productos/Aroma.jpg", badge: "Ideal para Regalo", isPack: true,
   },
 ];
 
