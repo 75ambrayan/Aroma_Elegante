@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { ShoppingBag, X, Plus, Minus, Menu, MessageCircle, Shield, Star, Truck } from "lucide-react";
 import { motion } from "motion/react";
-import logo from "../assets/logo-aroma-elegante.png";
+import logo from "../assets/AromaElegante.jpg";
 
 /* ─── TYPES ───────────────────────────────────────────────── */
 interface Product {
@@ -781,7 +781,7 @@ export default function App() {
       <footer className="py-12 px-6 md:px-12 max-w-7xl mx-auto" style={{ borderTop: `1px solid ${FG}15` }}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
-            <img src={logo} alt="Aroma Elegante" style={{ height: "56px", objectFit: "contain", marginBottom: "12px" }} />
+            <img src={logo} alt="Aroma Elegante" style={{ height: "80px", objectFit: "contain", marginBottom: "12px" }} />
             <p className="font-light leading-relaxed text-sm" style={{ color: `${FG}60`, fontFamily: FONT }}>Perfumes originales de marcas nacionales. Perú 🇵🇪</p>
           </div>
           {[
